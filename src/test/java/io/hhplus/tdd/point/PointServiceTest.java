@@ -40,10 +40,6 @@ class PointServiceTest {
         mockPoint = new UserPoint(1L, 100L, System.currentTimeMillis());
     }
 
-    /**
-     * 유저의 포인트 조회 시, 존재하지 않는 유저 id에 대한 에러 케이스
-     * @BeforEach에서 생성된 mockPoint의 id는 1L이나 2L를 조회하여 에러 발생되는 것을 확인
-     */
     @Test
     void 포인트_조회시_미존재_유저_검사() {
 

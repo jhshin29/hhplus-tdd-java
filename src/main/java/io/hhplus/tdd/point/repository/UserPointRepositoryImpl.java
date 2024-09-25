@@ -17,7 +17,7 @@ public class UserPointRepositoryImpl implements UserPointRepository {
     }
 
     @Override
-    public UserPoint upsert(Long id, Long amount) {
+    public synchronized UserPoint upsert(Long id, Long amount) {
         return userPointTable.insertOrUpdate(id, amount);
     }
 }
